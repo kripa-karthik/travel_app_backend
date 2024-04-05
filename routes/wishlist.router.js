@@ -6,11 +6,11 @@ const wishlistHandler=require('../controllers/wishlistController');
 
 const {createWishlistHandler,deleteWishlistHandler,getWishlistHandler}=wishlistHandler;
 
-router.route(verifyUser,'/').post(createWishlistHandler);
+router.route('/').post(verifyUser,createWishlistHandler);
 
-router.route(verifyUser,'/:id').delete(deleteWishlistHandler);
+router.route('/:id').delete(verifyUser,deleteWishlistHandler);
 
-router.route(verifyUser,'/').get(getWishlistHandler);
+router.route('/').get(verifyUser,getWishlistHandler);
 
 module.exports=router;
 
