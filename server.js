@@ -21,7 +21,7 @@ const app=express();
 app.use(express.json());
 connectDB();
 
-const PORT=3500;
+const PORT=3000;
 
 app.get("/",(req,res)=>{
     res.send('hello geeks');
